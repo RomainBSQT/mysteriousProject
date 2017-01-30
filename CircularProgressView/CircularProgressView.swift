@@ -79,8 +79,6 @@ class CircularProgressView: UIView {
 // MARK: Color handling
 fileprivate extension CircularProgressView {
 	
-	static let flatGreen = UIColor(red: ) (red) 46, 204, 113)
-	
 	fileprivate static func color(for value: Float) -> UIColor {
 		switch value {
 		case 0...3:
