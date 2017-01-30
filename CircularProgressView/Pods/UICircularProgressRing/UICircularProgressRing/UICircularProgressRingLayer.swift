@@ -234,7 +234,7 @@ class UICircularProgressRingLayer: CAShapeLayer {
         valueLabel.font = UIFont.systemFont(ofSize: fontSize)
         valueLabel.textAlignment = .center
         valueLabel.textColor = fontColor
-        
+		valueLabel.adjustsFontSizeToFitWidth = true
         if let fName = customFontWithName {
             valueLabel.font = UIFont(name: fName, size: fontSize)
         }
@@ -244,7 +244,6 @@ class UICircularProgressRingLayer: CAShapeLayer {
         
         // Deterime what should be the center for the label
         valueLabel.center = CGPoint(x: bounds.midX, y: bounds.midY)
-        
         valueLabel.drawText(in: self.bounds)
     }
 }

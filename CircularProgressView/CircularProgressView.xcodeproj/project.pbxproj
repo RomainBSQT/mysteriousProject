@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		30E56A351E3FD22100746F85 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E56A341E3FD22100746F85 /* CircularProgressView.swift */; };
-		30E56A371E3FD3DE00746F85 /* CircularProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E56A361E3FD3DE00746F85 /* CircularProgressView.xib */; };
 		30FAB3EC1E3DF404002CB8C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FAB3EB1E3DF404002CB8C7 /* AppDelegate.swift */; };
 		30FAB3EE1E3DF404002CB8C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FAB3ED1E3DF404002CB8C7 /* ViewController.swift */; };
 		30FAB3F11E3DF404002CB8C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FAB3EF1E3DF404002CB8C7 /* Main.storyboard */; };
 		30FAB3F31E3DF404002CB8C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30FAB3F21E3DF404002CB8C7 /* Assets.xcassets */; };
 		30FAB3F61E3DF404002CB8C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30FAB3F41E3DF404002CB8C7 /* LaunchScreen.storyboard */; };
 		30FAB4011E3DF404002CB8C7 /* CircularProgressViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FAB4001E3DF404002CB8C7 /* CircularProgressViewTests.swift */; };
-		80F0A424C03F8D4FF93E7FCA /* Pods_CircularProgressViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD123B30C54E2465E7D9597 /* Pods_CircularProgressViewTests.framework */; };
-		CFD07D2BE9CEA5187934F822 /* Pods_CircularProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1250CFFC6B591958755BD36 /* Pods_CircularProgressView.framework */; };
+		A2AE1F26E53E3BBC776D53F4 /* Pods_CircularProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 362F5E7DF8EAA11F8EEE6912 /* Pods_CircularProgressView.framework */; };
+		D71B648104315FB3DED15B17 /* Pods_CircularProgressViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2865505E4038E0606EE926E /* Pods_CircularProgressViewTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		30E56A341E3FD22100746F85 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		30E56A361E3FD3DE00746F85 /* CircularProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircularProgressView.xib; sourceTree = "<group>"; };
 		30FAB3E81E3DF404002CB8C7 /* CircularProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FAB3EB1E3DF404002CB8C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30FAB3ED1E3DF404002CB8C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,12 +40,12 @@
 		30FAB3FC1E3DF404002CB8C7 /* CircularProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircularProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FAB4001E3DF404002CB8C7 /* CircularProgressViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressViewTests.swift; sourceTree = "<group>"; };
 		30FAB4021E3DF404002CB8C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40DCD08A483404C9DE7FF5E7 /* Pods-CircularProgressView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircularProgressView/Pods-CircularProgressView.release.xcconfig"; sourceTree = "<group>"; };
-		5F51F51798567C0C0C9A6C21 /* Pods-CircularProgressViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircularProgressViewTests/Pods-CircularProgressViewTests.release.xcconfig"; sourceTree = "<group>"; };
-		6FD123B30C54E2465E7D9597 /* Pods_CircularProgressViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularProgressViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1250CFFC6B591958755BD36 /* Pods_CircularProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F05BF5F6537111E43B2809E3 /* Pods-CircularProgressView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircularProgressView/Pods-CircularProgressView.debug.xcconfig"; sourceTree = "<group>"; };
-		F4454C7198110C3E4D5D4D08 /* Pods-CircularProgressViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircularProgressViewTests/Pods-CircularProgressViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		31A75F1B6F3A1995C6C3108A /* Pods-CircularProgressView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircularProgressView/Pods-CircularProgressView.debug.xcconfig"; sourceTree = "<group>"; };
+		362F5E7DF8EAA11F8EEE6912 /* Pods_CircularProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C2EC70036896925F1845014 /* Pods-CircularProgressViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircularProgressViewTests/Pods-CircularProgressViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		A3F0AE2F5B0FBEFC0295548A /* Pods-CircularProgressViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircularProgressViewTests/Pods-CircularProgressViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2865505E4038E0606EE926E /* Pods_CircularProgressViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularProgressViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3A0DCA452B57FA4547EEBAF /* Pods-CircularProgressView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularProgressView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircularProgressView/Pods-CircularProgressView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD07D2BE9CEA5187934F822 /* Pods_CircularProgressView.framework in Frameworks */,
+				A2AE1F26E53E3BBC776D53F4 /* Pods_CircularProgressView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,18 +61,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80F0A424C03F8D4FF93E7FCA /* Pods_CircularProgressViewTests.framework in Frameworks */,
+				D71B648104315FB3DED15B17 /* Pods_CircularProgressViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07882D73C698491589882C52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31A75F1B6F3A1995C6C3108A /* Pods-CircularProgressView.debug.xcconfig */,
+				F3A0DCA452B57FA4547EEBAF /* Pods-CircularProgressView.release.xcconfig */,
+				A3F0AE2F5B0FBEFC0295548A /* Pods-CircularProgressViewTests.debug.xcconfig */,
+				7C2EC70036896925F1845014 /* Pods-CircularProgressViewTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		30E56A331E3FD0ED00746F85 /* ProgressView */ = {
 			isa = PBXGroup;
 			children = (
 				30E56A341E3FD22100746F85 /* CircularProgressView.swift */,
-				30E56A361E3FD3DE00746F85 /* CircularProgressView.xib */,
 			);
 			name = ProgressView;
 			sourceTree = "<group>";
@@ -86,8 +94,8 @@
 				30FAB3EA1E3DF404002CB8C7 /* CircularProgressView */,
 				30FAB3FF1E3DF404002CB8C7 /* CircularProgressViewTests */,
 				30FAB3E91E3DF404002CB8C7 /* Products */,
-				4F7B9630EAD2636BB47B3FD1 /* Pods */,
-				AD26B3B25F7E9C9757BF37E7 /* Frameworks */,
+				07882D73C698491589882C52 /* Pods */,
+				DFD963BC69EAEC5EDC933C86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,22 +130,11 @@
 			path = CircularProgressViewTests;
 			sourceTree = "<group>";
 		};
-		4F7B9630EAD2636BB47B3FD1 /* Pods */ = {
+		DFD963BC69EAEC5EDC933C86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F05BF5F6537111E43B2809E3 /* Pods-CircularProgressView.debug.xcconfig */,
-				40DCD08A483404C9DE7FF5E7 /* Pods-CircularProgressView.release.xcconfig */,
-				F4454C7198110C3E4D5D4D08 /* Pods-CircularProgressViewTests.debug.xcconfig */,
-				5F51F51798567C0C0C9A6C21 /* Pods-CircularProgressViewTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		AD26B3B25F7E9C9757BF37E7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A1250CFFC6B591958755BD36 /* Pods_CircularProgressView.framework */,
-				6FD123B30C54E2465E7D9597 /* Pods_CircularProgressViewTests.framework */,
+				362F5E7DF8EAA11F8EEE6912 /* Pods_CircularProgressView.framework */,
+				C2865505E4038E0606EE926E /* Pods_CircularProgressViewTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,12 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30FAB4051E3DF404002CB8C7 /* Build configuration list for PBXNativeTarget "CircularProgressView" */;
 			buildPhases = (
-				6D9893209868AA408475611E /* [CP] Check Pods Manifest.lock */,
+				0C676DC9AAB41F8CBFAF3EF0 /* [CP] Check Pods Manifest.lock */,
 				30FAB3E41E3DF404002CB8C7 /* Sources */,
 				30FAB3E51E3DF404002CB8C7 /* Frameworks */,
 				30FAB3E61E3DF404002CB8C7 /* Resources */,
-				3B17BBEEAE71F37D719F1E8B /* [CP] Embed Pods Frameworks */,
-				A3E5525FE91BA273DE5FED07 /* [CP] Copy Pods Resources */,
+				2CE02BA173DDEE4230735BDC /* [CP] Embed Pods Frameworks */,
+				3A43DF774FAED2A5B5281B10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,12 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30FAB4081E3DF404002CB8C7 /* Build configuration list for PBXNativeTarget "CircularProgressViewTests" */;
 			buildPhases = (
-				C92660E522655573D0E2103B /* [CP] Check Pods Manifest.lock */,
+				63FA198E7682DB20BF3AB338 /* [CP] Check Pods Manifest.lock */,
 				30FAB3F81E3DF404002CB8C7 /* Sources */,
 				30FAB3F91E3DF404002CB8C7 /* Frameworks */,
 				30FAB3FA1E3DF404002CB8C7 /* Resources */,
-				F91ECFACF7BBF92D7F30F981 /* [CP] Embed Pods Frameworks */,
-				84406E95DE858F1F0C46FCF2 /* [CP] Copy Pods Resources */,
+				1812E8AE9128FC98AD85641D /* [CP] Embed Pods Frameworks */,
+				C70728F0912A388B216DC4C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,7 +230,6 @@
 			files = (
 				30FAB3F61E3DF404002CB8C7 /* LaunchScreen.storyboard in Resources */,
 				30FAB3F31E3DF404002CB8C7 /* Assets.xcassets in Resources */,
-				30E56A371E3FD3DE00746F85 /* CircularProgressView.xib in Resources */,
 				30FAB3F11E3DF404002CB8C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +244,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3B17BBEEAE71F37D719F1E8B /* [CP] Embed Pods Frameworks */ = {
+		0C676DC9AAB41F8CBFAF3EF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1812E8AE9128FC98AD85641D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircularProgressViewTests/Pods-CircularProgressViewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CE02BA173DDEE4230735BDC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,37 +289,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircularProgressView/Pods-CircularProgressView-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6D9893209868AA408475611E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		84406E95DE858F1F0C46FCF2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircularProgressViewTests/Pods-CircularProgressViewTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A3E5525FE91BA273DE5FED07 /* [CP] Copy Pods Resources */ = {
+		3A43DF774FAED2A5B5281B10 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -308,7 +304,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircularProgressView/Pods-CircularProgressView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C92660E522655573D0E2103B /* [CP] Check Pods Manifest.lock */ = {
+		63FA198E7682DB20BF3AB338 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -323,19 +319,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		F91ECFACF7BBF92D7F30F981 /* [CP] Embed Pods Frameworks */ = {
+		C70728F0912A388B216DC4C6 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircularProgressViewTests/Pods-CircularProgressViewTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircularProgressViewTests/Pods-CircularProgressViewTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -482,7 +478,7 @@
 		};
 		30FAB4061E3DF404002CB8C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F05BF5F6537111E43B2809E3 /* Pods-CircularProgressView.debug.xcconfig */;
+			baseConfigurationReference = 31A75F1B6F3A1995C6C3108A /* Pods-CircularProgressView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CircularProgressView/Info.plist;
@@ -495,7 +491,7 @@
 		};
 		30FAB4071E3DF404002CB8C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40DCD08A483404C9DE7FF5E7 /* Pods-CircularProgressView.release.xcconfig */;
+			baseConfigurationReference = F3A0DCA452B57FA4547EEBAF /* Pods-CircularProgressView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CircularProgressView/Info.plist;
@@ -508,7 +504,7 @@
 		};
 		30FAB4091E3DF404002CB8C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4454C7198110C3E4D5D4D08 /* Pods-CircularProgressViewTests.debug.xcconfig */;
+			baseConfigurationReference = A3F0AE2F5B0FBEFC0295548A /* Pods-CircularProgressViewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,7 +519,7 @@
 		};
 		30FAB40A1E3DF404002CB8C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F51F51798567C0C0C9A6C21 /* Pods-CircularProgressViewTests.release.xcconfig */;
+			baseConfigurationReference = 7C2EC70036896925F1845014 /* Pods-CircularProgressViewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

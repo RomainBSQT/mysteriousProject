@@ -12,14 +12,11 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		let circularView = CircularProgressView(frame: CGRect(x: 20, y: 20, width: 100, height: 100))
+		circularView.progressValue = 8
+		circularView.valueFontSize = 25
+		view.addSubview(circularView)
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
 
 }
 
