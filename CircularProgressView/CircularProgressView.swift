@@ -49,7 +49,7 @@ class CircularProgressView: UIView {
 
 	// MARK: Setup
 	private func initialize() {
-		backgroundColor = .lightGray
+		backgroundColor = .clear
 		addSubview(ringShadowView)
 		addSubview(ringColoredView)
 		addSubview(imageView)
