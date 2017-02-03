@@ -15,6 +15,7 @@ class CircularProgressView: UIView {
 	
 	var progressValue: Float = 0 {
 		didSet {
+			ringColoredView.setProgress(value: CGFloat(self.progressValue), animationDuration: CircularProgressView.animationInterval)
 			ringColoredView.value = CGFloat(self.progressValue)
 			ringColoredView.fontColor = CircularProgressView.color(for: self.progressValue)
 			ringColoredView.innerRingColor = CircularProgressView.color(for: self.progressValue)
@@ -31,6 +32,7 @@ class CircularProgressView: UIView {
 	fileprivate var ringColoredView: UICircularProgressRingView
 	private static let startAngle: CGFloat = 45
 	private static let endAngle: CGFloat = 270
+	private static let animationInterval: TimeInterval = 0.3
 	
 	override init(frame: CGRect) {
 		self.ringShadowView = UICircularProgressRingView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
