@@ -54,6 +54,7 @@
 		30AEBA971E45191B0019BF6F /* ChronoTimerView */ = {
 			isa = PBXGroup;
 			children = (
+				30AEBAAA1E4519640019BF6F /* ChronoTimerView */,
 				30AEBA981E45191B0019BF6F /* AppDelegate.swift */,
 				30AEBA9A1E45191B0019BF6F /* ViewController.swift */,
 				30AEBA9C1E45191B0019BF6F /* Main.storyboard */,
@@ -62,6 +63,13 @@
 				30AEBAA41E45191B0019BF6F /* Info.plist */,
 			);
 			path = ChronoTimerView;
+			sourceTree = "<group>";
+		};
+		30AEBAAA1E4519640019BF6F /* ChronoTimerView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ChronoTimerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
