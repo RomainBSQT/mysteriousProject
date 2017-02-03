@@ -11,9 +11,11 @@ import UICircularProgressRing
 
 class CircularProgressView: UIView {
 
+	var imageView: UIImageView
+	
 	var progressValue: Float = 0 {
 		didSet {
-			ringColoredView.value = CGFloat(self.progressValue) / 10.0
+			ringColoredView.value = CGFloat(self.progressValue)
 			ringColoredView.fontColor = CircularProgressView.color(for: self.progressValue)
 			ringColoredView.innerRingColor = CircularProgressView.color(for: self.progressValue)
 		}
@@ -33,7 +35,9 @@ class CircularProgressView: UIView {
 	override init(frame: CGRect) {
 		self.ringShadowView = UICircularProgressRingView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
 		self.ringColoredView = UICircularProgressRingView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+		self.imageView = UIImageView(frame: CGRect(x: frame.size.width * 0.75, y: 0, width: frame.size.width / 4, height: frame.size.width / 4))
 		super.init(frame: frame)
+		self.imageView.contentMode = .scaleAspectFit
 		initialize()
 	}
 	
@@ -43,9 +47,10 @@ class CircularProgressView: UIView {
 
 	// MARK: Setup
 	private func initialize() {
-		backgroundColor = .white
+		backgroundColor = .lightGray
 		addSubview(ringShadowView)
 		addSubview(ringColoredView)
+		addSubview(imageView)
 
 		setupShadowRing()
 		setupColoredRing()
@@ -62,7 +67,7 @@ class CircularProgressView: UIView {
 	}
 	
 	private func setupColoredRing() {
-		ringColoredView.maxValue = 1
+		ringColoredView.maxValue = 10
 		ringColoredView.value = CGFloat(progressValue)
 		ringColoredView.startAngle = CircularProgressView.startAngle
 		ringColoredView.endAngle = CircularProgressView.endAngle

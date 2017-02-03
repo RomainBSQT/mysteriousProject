@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30AEBAB01E451F930019BF6F /* 5096775680_7c0a985c00_b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30AEBAAF1E451F930019BF6F /* 5096775680_7c0a985c00_b.jpg */; };
 		30E56A351E3FD22100746F85 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E56A341E3FD22100746F85 /* CircularProgressView.swift */; };
 		30FAB3EC1E3DF404002CB8C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FAB3EB1E3DF404002CB8C7 /* AppDelegate.swift */; };
 		30FAB3EE1E3DF404002CB8C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FAB3ED1E3DF404002CB8C7 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30AEBAAF1E451F930019BF6F /* 5096775680_7c0a985c00_b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5096775680_7c0a985c00_b.jpg; sourceTree = "<group>"; };
 		30E56A341E3FD22100746F85 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		30FAB3E81E3DF404002CB8C7 /* CircularProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30FAB3EB1E3DF404002CB8C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		30FAB3EA1E3DF404002CB8C7 /* CircularProgressView */ = {
 			isa = PBXGroup;
 			children = (
+				30AEBAAF1E451F930019BF6F /* 5096775680_7c0a985c00_b.jpg */,
 				30FAB3EB1E3DF404002CB8C7 /* AppDelegate.swift */,
 				30FAB3ED1E3DF404002CB8C7 /* ViewController.swift */,
 				30FAB3F21E3DF404002CB8C7 /* Assets.xcassets */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30FAB3F61E3DF404002CB8C7 /* LaunchScreen.storyboard in Resources */,
+				30AEBAB01E451F930019BF6F /* 5096775680_7c0a985c00_b.jpg in Resources */,
 				30FAB3F31E3DF404002CB8C7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
