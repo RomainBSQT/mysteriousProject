@@ -16,27 +16,32 @@ class ChronoTimerView: UIView {
 	@IBOutlet weak var distanceLabel: UILabel!
 
 	fileprivate var dashedRingView: UICircularProgressRingView
-	fileprivate var progressArcView: UICircularProgressRingView
+	fileprivate var progressArcView: UICircularProgressRingView?
 	
 	// MARK: UI Consts
 	static private let lineWidth: CGFloat = 2.5
-	static private let dashPattern: [CGFloat] = [8, 2.3]
-	static private let arcSize: CGFloat = 6
+	static private let dashPattern: [CGFloat] = [7.746, 2.582] //--complete circle = 619.7 for 2.5 linewidth
+	static private let arcSize: CGFloat = 4.5
+    static private let marginBetweenDashes: CGFloat = 1.5
 	
 	// MARK: Colors
 	static private let dashedCircleColor = UIColor(red: 67.0/255.0, green: 166.0/255.0, blue: 246.0/255.0, alpha: 1)
+    static private let arcColor = UIColor(red: 247.0/255.0, green: 83.0/255.0, blue: 78.0/255.0, alpha: 1)
     
     // MARK: Timer
     private var timer: Timer?
     private var currentProgressAngle: CGFloat = 0
 
-	// MARK: Setup
+	// MARK: LifeCycle
 	required init?(coder aDecoder: NSCoder) {
 		self.dashedRingView = UICircularProgressRingView(frame: CGRect.zero)
-		self.progressArcView = UICircularProgressRingView(frame: CGRect.zero)
 		super.init(coder: aDecoder)
 		initialize()
 	}
+    
+    deinit {
+        timer?.invalidate()
+    }
 
 	private func initialize() {
 		dashedRingView.innerRingWidth = 0
@@ -45,42 +50,42 @@ class ChronoTimerView: UIView {
 		dashedRingView.patternForDashes = ChronoTimerView.dashPattern
 		dashedRingView.outerRingColor = ChronoTimerView.dashedCircleColor
 		dashedRingView.fontColor = .clear
-		
-		progressArcView.innerRingWidth = 0
-		progressArcView.startAngle = 50
-        progressArcView.endAngle = progressArcView.startAngle + ChronoTimerView.arcSize
-        progressArcView.value = 0
-		progressArcView.outerRingWidth = ChronoTimerView.lineWidth
-		progressArcView.patternForDashes = ChronoTimerView.dashPattern
-		progressArcView.outerRingColor = .red
-		progressArcView.fontColor = .clear
 	}
+    
+    private func setupArc(with startAngle: CGFloat) {
+        progressArcView = UICircularProgressRingView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        chronoView.addSubview(progressArcView!)
+        progressArcView?.innerRingWidth = 0
+        progressArcView?.outerRingWidth = ChronoTimerView.lineWidth
+        progressArcView?.outerRingColor = .red
+        progressArcView?.startAngle = startAngle
+        progressArcView?.endAngle = startAngle + ChronoTimerView.arcSize
+        progressArcView?.fontColor = .clear
+        progressArcView?.value = 1
+    }
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		
 		chronoView.addSubview(dashedRingView)
-		chronoView.addSubview(progressArcView)
 		chronoView.backgroundColor = .clear
-		
 		dashedRingView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-		progressArcView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-		
-        currentProgressAngle = progressArcView.startAngle
+	}
+    
+    // MARK: Public fonction
+    public func startChronometer() {
+        setupArc(with: currentProgressAngle)
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (timer) in
             guard let wSelf = self else {
                 return
             }
-            wSelf.animateArc(with: wSelf.currentProgressAngle)
-            wSelf.currentProgressAngle += ChronoTimerView.arcSize
+            if wSelf.progressArcView != nil {
+                wSelf.progressArcView?.removeFromSuperview()
+                wSelf.progressArcView = nil
+            }
+            wSelf.setupArc(with: wSelf.currentProgressAngle)
+            wSelf.currentProgressAngle += ChronoTimerView.arcSize + ChronoTimerView.marginBetweenDashes
         })
-	}
-
-	// MARK: Animation
-	private func animateArc(with startAngle: CGFloat) {
-		progressArcView.startAngle = startAngle
-		progressArcView.endAngle = startAngle + ChronoTimerView.arcSize
-        progressArcView.value = 1
-	}
+    }
     
 }

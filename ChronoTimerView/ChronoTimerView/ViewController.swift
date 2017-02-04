@@ -17,6 +17,8 @@ class ViewController: UIViewController {
 		
 		let chronoView = Bundle.main.loadNibNamed("ChronoTimerView", owner: self, options: nil)?.first as! ChronoTimerView
 		view.addSubview(chronoView)
+        
+        chronoView.startChronometer()
 	}
 
 }
