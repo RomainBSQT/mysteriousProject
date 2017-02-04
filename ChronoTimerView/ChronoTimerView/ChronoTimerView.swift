@@ -20,7 +20,7 @@ class ChronoTimerView: UIView {
 	
 	// MARK: UI Consts
 	static private let lineWidth: CGFloat = 2.5
-	static private let dashPattern: [CGFloat] = [7.746, 2.582] //--complete circle = 619.7 for 2.5 linewidth
+	static private let dashPattern: [CGFloat] = [7.746, 2.582] //-- complete circle = 619.7 for 2.5 linewidth
 	static private let arcSize: CGFloat = 4.5
     static private let marginBetweenDashes: CGFloat = 1.5
 	
@@ -28,19 +28,26 @@ class ChronoTimerView: UIView {
 	static private let dashedCircleColor = UIColor(red: 67.0/255.0, green: 166.0/255.0, blue: 246.0/255.0, alpha: 1)
     static private let arcColor = UIColor(red: 247.0/255.0, green: 83.0/255.0, blue: 78.0/255.0, alpha: 1)
     
-    // MARK: Timer
-    private var timer: Timer?
+    // MARK: Timers
+    private var secondHandTimer: Timer? //-- timer pour refresh l'ui du chronometre
+    
+    // MARK: Iterating properties
     private var currentProgressAngle: CGFloat = 0
+    
+    // MARK: Date handling
+    private var startDate: Date?
+    private let dateFormatter: DateFormatter
 
 	// MARK: LifeCycle
 	required init?(coder aDecoder: NSCoder) {
 		self.dashedRingView = UICircularProgressRingView(frame: CGRect.zero)
+        self.dateFormatter = DateFormatter()
 		super.init(coder: aDecoder)
 		initialize()
 	}
     
     deinit {
-        timer?.invalidate()
+        secondHandTimer?.invalidate()
     }
 
 	private func initialize() {
@@ -50,18 +57,22 @@ class ChronoTimerView: UIView {
 		dashedRingView.patternForDashes = ChronoTimerView.dashPattern
 		dashedRingView.outerRingColor = ChronoTimerView.dashedCircleColor
 		dashedRingView.fontColor = .clear
+        
+        dateFormatter.dateFormat = "H'h 'mm'm 'ss's'"
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
 	}
     
     private func setupArc(with startAngle: CGFloat) {
         progressArcView = UICircularProgressRingView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         chronoView.addSubview(progressArcView!)
-        progressArcView?.innerRingWidth = 0
-        progressArcView?.outerRingWidth = ChronoTimerView.lineWidth
-        progressArcView?.outerRingColor = .red
+        
         progressArcView?.startAngle = startAngle
         progressArcView?.endAngle = startAngle + ChronoTimerView.arcSize
+        progressArcView?.outerRingWidth = ChronoTimerView.lineWidth
+        progressArcView?.innerRingWidth = 0
+        progressArcView?.outerRingColor = ChronoTimerView.arcColor
+        progressArcView?.maxValue = 100
         progressArcView?.fontColor = .clear
-        progressArcView?.value = 1
     }
 	
 	override func awakeFromNib() {
@@ -70,15 +81,24 @@ class ChronoTimerView: UIView {
 		chronoView.addSubview(dashedRingView)
 		chronoView.backgroundColor = .clear
 		dashedRingView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
+        timeLabel.text = "0h 00m 00s"
 	}
     
     // MARK: Public fonction
     public func startChronometer() {
+        startDate = Date()
         setupArc(with: currentProgressAngle)
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (timer) in
-            guard let wSelf = self else {
-                return
-            }
+        secondHandTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (timer) in
+            guard let wSelf = self else { return }
+            guard let startDate = wSelf.startDate else { return }
+            
+            //-- Label part
+            let currentDate = Date()
+            let timeInterval = currentDate.timeIntervalSince(startDate)
+            let timerDate = Date(timeIntervalSince1970: timeInterval)
+            wSelf.timeLabel.text = wSelf.dateFormatter.string(from: timerDate)
+            
+            //-- Second hand part
             if wSelf.progressArcView != nil {
                 wSelf.progressArcView?.removeFromSuperview()
                 wSelf.progressArcView = nil
