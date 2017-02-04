@@ -12,6 +12,9 @@
 		30AEBA9E1E45191B0019BF6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AEBA9C1E45191B0019BF6F /* Main.storyboard */; };
 		30AEBAA01E45191B0019BF6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30AEBA9F1E45191B0019BF6F /* Assets.xcassets */; };
 		30AEBAA31E45191B0019BF6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AEBAA11E45191B0019BF6F /* LaunchScreen.storyboard */; };
+		30AEBAB21E4525290019BF6F /* ChronoTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AEBAB11E4525290019BF6F /* ChronoTimerView.swift */; };
+		30AEBAB41E4525360019BF6F /* ChronoTimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30AEBAB31E4525360019BF6F /* ChronoTimerView.xib */; };
+		C7729E892A2E4F6D889B10DD /* Pods_ChronoTimerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14AE84557EA1858B657E441 /* Pods_ChronoTimerView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		30AEBA9F1E45191B0019BF6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30AEBAA21E45191B0019BF6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30AEBAA41E45191B0019BF6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30AEBAB11E4525290019BF6F /* ChronoTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronoTimerView.swift; sourceTree = "<group>"; };
+		30AEBAB31E4525360019BF6F /* ChronoTimerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChronoTimerView.xib; sourceTree = "<group>"; };
+		B12CBC883A51A1A426C772B5 /* Pods-ChronoTimerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoTimerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoTimerView/Pods-ChronoTimerView.release.xcconfig"; sourceTree = "<group>"; };
+		E14AE84557EA1858B657E441 /* Pods_ChronoTimerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChronoTimerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA621E53721F000A52B98478 /* Pods-ChronoTimerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoTimerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoTimerView/Pods-ChronoTimerView.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7729E892A2E4F6D889B10DD /* Pods_ChronoTimerView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +49,8 @@
 			children = (
 				30AEBA971E45191B0019BF6F /* ChronoTimerView */,
 				30AEBA961E45191B0019BF6F /* Products */,
+				F4C8D4BF20DE2EF9D59B3A5C /* Pods */,
+				9E0FB5810FD585D975010040 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,8 +79,27 @@
 		30AEBAAA1E4519640019BF6F /* ChronoTimerView */ = {
 			isa = PBXGroup;
 			children = (
+				30AEBAB11E4525290019BF6F /* ChronoTimerView.swift */,
+				30AEBAB31E4525360019BF6F /* ChronoTimerView.xib */,
 			);
 			name = ChronoTimerView;
+			sourceTree = "<group>";
+		};
+		9E0FB5810FD585D975010040 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E14AE84557EA1858B657E441 /* Pods_ChronoTimerView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4C8D4BF20DE2EF9D59B3A5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA621E53721F000A52B98478 /* Pods-ChronoTimerView.debug.xcconfig */,
+				B12CBC883A51A1A426C772B5 /* Pods-ChronoTimerView.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30AEBAA71E45191B0019BF6F /* Build configuration list for PBXNativeTarget "ChronoTimerView" */;
 			buildPhases = (
+				07F974CD04A1F965BEB07AE7 /* [CP] Check Pods Manifest.lock */,
 				30AEBA911E45191A0019BF6F /* Sources */,
 				30AEBA921E45191A0019BF6F /* Frameworks */,
 				30AEBA931E45191A0019BF6F /* Resources */,
+				7C404D41E7288F5566F61C76 /* [CP] Embed Pods Frameworks */,
+				FD0851304BC14B4661F7978A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,12 +165,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				30AEBAA31E45191B0019BF6F /* LaunchScreen.storyboard in Resources */,
+				30AEBAB41E4525360019BF6F /* ChronoTimerView.xib in Resources */,
 				30AEBAA01E45191B0019BF6F /* Assets.xcassets in Resources */,
 				30AEBA9E1E45191B0019BF6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07F974CD04A1F965BEB07AE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C404D41E7288F5566F61C76 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChronoTimerView/Pods-ChronoTimerView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD0851304BC14B4661F7978A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChronoTimerView/Pods-ChronoTimerView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30AEBA911E45191A0019BF6F /* Sources */ = {
@@ -146,6 +228,7 @@
 			files = (
 				30AEBA9B1E45191B0019BF6F /* ViewController.swift in Sources */,
 				30AEBA991E45191B0019BF6F /* AppDelegate.swift in Sources */,
+				30AEBAB21E4525290019BF6F /* ChronoTimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +347,7 @@
 		};
 		30AEBAA81E45191B0019BF6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA621E53721F000A52B98478 /* Pods-ChronoTimerView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChronoTimerView/Info.plist;
@@ -276,6 +360,7 @@
 		};
 		30AEBAA91E45191B0019BF6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12CBC883A51A1A426C772B5 /* Pods-ChronoTimerView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChronoTimerView/Info.plist;
@@ -305,6 +390,7 @@
 				30AEBAA91E45191B0019BF6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

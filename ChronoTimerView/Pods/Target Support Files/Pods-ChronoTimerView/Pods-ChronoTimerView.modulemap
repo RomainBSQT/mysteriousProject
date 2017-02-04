@@ -1,0 +1,6 @@
+framework module Pods_ChronoTimerView {
+  umbrella header "Pods-ChronoTimerView-umbrella.h"
+
+  export *
+  module * { export * }
+}
