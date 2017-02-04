@@ -25,6 +25,10 @@ class ChronoTimerView: UIView {
 	
 	// MARK: Colors
 	static private let dashedCircleColor = UIColor(red: 67.0/255.0, green: 166.0/255.0, blue: 246.0/255.0, alpha: 1)
+    
+    // MARK: Timer
+    private var timer: Timer?
+    private var currentProgressAngle: CGFloat = 0
 
 	// MARK: Setup
 	required init?(coder aDecoder: NSCoder) {
@@ -43,7 +47,9 @@ class ChronoTimerView: UIView {
 		dashedRingView.fontColor = .clear
 		
 		progressArcView.innerRingWidth = 0
-		progressArcView.startAngle = 0
+		progressArcView.startAngle = 50
+        progressArcView.endAngle = progressArcView.startAngle + ChronoTimerView.arcSize
+        progressArcView.value = 0
 		progressArcView.outerRingWidth = ChronoTimerView.lineWidth
 		progressArcView.patternForDashes = ChronoTimerView.dashPattern
 		progressArcView.outerRingColor = .red
@@ -60,12 +66,21 @@ class ChronoTimerView: UIView {
 		dashedRingView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
 		progressArcView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
 		
-		animateArc(with: 100)
+        currentProgressAngle = progressArcView.startAngle
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [weak self] (timer) in
+            guard let wSelf = self else {
+                return
+            }
+            wSelf.animateArc(with: wSelf.currentProgressAngle)
+            wSelf.currentProgressAngle += ChronoTimerView.arcSize
+        })
 	}
 
 	// MARK: Animation
 	private func animateArc(with startAngle: CGFloat) {
 		progressArcView.startAngle = startAngle
 		progressArcView.endAngle = startAngle + ChronoTimerView.arcSize
+        progressArcView.value = 1
 	}
+    
 }
