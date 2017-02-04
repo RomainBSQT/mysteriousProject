@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import UICircularProgressRing
 
 class ChronoTimerView: UIView {
 

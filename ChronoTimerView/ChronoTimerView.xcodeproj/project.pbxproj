@@ -14,6 +14,9 @@
 		30AEBAA31E45191B0019BF6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30AEBAA11E45191B0019BF6F /* LaunchScreen.storyboard */; };
 		30AEBAB21E4525290019BF6F /* ChronoTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AEBAB11E4525290019BF6F /* ChronoTimerView.swift */; };
 		30AEBAB41E4525360019BF6F /* ChronoTimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30AEBAB31E4525360019BF6F /* ChronoTimerView.xib */; };
+		30F37BF91E465458009E4E0A /* UICircularProgressRingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F37BF61E465458009E4E0A /* UICircularProgressRingDelegate.swift */; };
+		30F37BFA1E465458009E4E0A /* UICircularProgressRingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F37BF71E465458009E4E0A /* UICircularProgressRingLayer.swift */; };
+		30F37BFB1E465458009E4E0A /* UICircularProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F37BF81E465458009E4E0A /* UICircularProgressRingView.swift */; };
 		C7729E892A2E4F6D889B10DD /* Pods_ChronoTimerView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14AE84557EA1858B657E441 /* Pods_ChronoTimerView.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,10 @@
 		30AEBAA41E45191B0019BF6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30AEBAB11E4525290019BF6F /* ChronoTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronoTimerView.swift; sourceTree = "<group>"; };
 		30AEBAB31E4525360019BF6F /* ChronoTimerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChronoTimerView.xib; sourceTree = "<group>"; };
+		30F37BF51E465458009E4E0A /* UICircularProgressRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICircularProgressRing.h; sourceTree = "<group>"; };
+		30F37BF61E465458009E4E0A /* UICircularProgressRingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICircularProgressRingDelegate.swift; sourceTree = "<group>"; };
+		30F37BF71E465458009E4E0A /* UICircularProgressRingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICircularProgressRingLayer.swift; sourceTree = "<group>"; };
+		30F37BF81E465458009E4E0A /* UICircularProgressRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICircularProgressRingView.swift; sourceTree = "<group>"; };
 		B12CBC883A51A1A426C772B5 /* Pods-ChronoTimerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoTimerView.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoTimerView/Pods-ChronoTimerView.release.xcconfig"; sourceTree = "<group>"; };
 		E14AE84557EA1858B657E441 /* Pods_ChronoTimerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChronoTimerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA621E53721F000A52B98478 /* Pods-ChronoTimerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChronoTimerView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChronoTimerView/Pods-ChronoTimerView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +88,10 @@
 			children = (
 				30AEBAB11E4525290019BF6F /* ChronoTimerView.swift */,
 				30AEBAB31E4525360019BF6F /* ChronoTimerView.xib */,
+				30F37BF51E465458009E4E0A /* UICircularProgressRing.h */,
+				30F37BF61E465458009E4E0A /* UICircularProgressRingDelegate.swift */,
+				30F37BF71E465458009E4E0A /* UICircularProgressRingLayer.swift */,
+				30F37BF81E465458009E4E0A /* UICircularProgressRingView.swift */,
 			);
 			name = ChronoTimerView;
 			sourceTree = "<group>";
@@ -228,7 +239,10 @@
 			files = (
 				30AEBA9B1E45191B0019BF6F /* ViewController.swift in Sources */,
 				30AEBA991E45191B0019BF6F /* AppDelegate.swift in Sources */,
+				30F37BF91E465458009E4E0A /* UICircularProgressRingDelegate.swift in Sources */,
 				30AEBAB21E4525290019BF6F /* ChronoTimerView.swift in Sources */,
+				30F37BFB1E465458009E4E0A /* UICircularProgressRingView.swift in Sources */,
+				30F37BFA1E465458009E4E0A /* UICircularProgressRingLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
